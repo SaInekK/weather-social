@@ -10,3 +10,6 @@ pip install requests
 pip install flask
 
 pip install flask_wtf
+
+pip install email_validator
+
