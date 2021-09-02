@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}
+
+{{ super() }}
+<title>Social-weather Main</title>
+
+{% endblock head %}
+
+{% block content -%}
+{{ super() }}
+<!--
+<div class="container-fluid">
+    <div class="mx-auto w-25">Пошлд погодапцФКПфукпфрукпфффкуркурукрукпк кцПП4кцф пкп ц</div>
+</div>
+-->
+<div  class="container-fluid home-slider ">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div id="heading" class="carousel-item active navbar-dark bg-dark">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Подарите себе несколько минут спокойствия, посмотрев<br>
+                      погоду и полюбовавшись фотографиями с разных 
+                      уголков планеты, на нашем сайте.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+{% block cards -%}
+<div class="container-fluid mt-5" style="background-color: rgb(165, 165, 165)">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="https://grandgames.net/puzzle/source/na_beregu__ozera.jpg" class="card-img-top" alt="Прекраснейшее озеро на Урале">
+                    <div class="card-body">
+                    <h5 class="card-title">Прекраснейшее озеро на Урале</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{{url_for('weather', city='Североуральске')}}" class="btn btn-primary">Погода в Североуральске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://img-fotki.yandex.ru/get/236239/493212545.581/0_1df999_5b1c8fbb_orig.jpg" class="card-img-top" alt="Голубая лагуна Урюпинска">
+                    <div class="card-body">
+                    <h5 class="card-title">Голубая лагуна Урюпинска</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{{url_for('weather', city='Урюпинске')}}" class="btn btn-primary">Погода в Урюпинске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://img-fotki.yandex.ru/get/4303/milkamilkina.53/0_5078a_651663bc_XL.jpg" class="card-img-top" alt="Леса Петербурга">
+                    <div class="card-body">
+                    <h5 class="card-title">Леса Санкт-Петербурга</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{{url_for('weather', city='Санкт-Петербурге')}}" class="btn btn-primary">Погода в Петербурге</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock cards -%}
+<div class="container-fluid" style="background-color: rgb(165, 165, 165)">
+    <nav aria-label="Paginate me">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Предыдущая</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Следующая</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+</div>
+
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <hr>
+            <form action="" method="post" class="form" role="form">
+            {{ form.csrf_token() }}
+            <d1>
+            {{ wtf.form_field(form.city, class='form-control') }}
+            </d1>
+            <div id="passwordHelpBlock" class="form-text">
+                Введите город маленькими буквами в предложном падеже
+            </div>
+            <p><input text="Найти" type=submit class='btn btn-primary'>
+            </form>
+            <hr>
+        </div>
+    </div>
+ </div>
+
+<h1 class="display-6" style="text-align: center;">Статистика просмотров нашего сайта неуклонно растет:</h1>
+<div class="mt-5" style="height: 250px; text-align: center;">
+    <div class="h-25 d-inline-block" style="background-color: green; width: 125px; vertical-align: bottom;"></div>
+    <div class="h-50 d-inline-block" style="background-color: green; width: 125px; vertical-align: bottom;"></div>
+    <div class="h-75 d-inline-block" style="background-color: green; width: 125px; vertical-align: bottom;"></div>
+    <div class="h-100 d-inline-block" style="background-color: green; width: 125px; vertical-align: bottom;"></div>
+</div>
+
+{% endblock content -%}  
