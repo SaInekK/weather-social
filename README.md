@@ -6,7 +6,6 @@
 
 Форма на второй странице - ниже комментариев.
 
-weather social network
 
 requirements:
 
