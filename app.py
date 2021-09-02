@@ -28,11 +28,6 @@ def get_weather(city):
 
     for e in weather_soup.select('#ArchTemp'):
         t_now = e.select('.t_0')[0].text.split(' ')[0]
-        # print(t_now)
-
-    # for e in weatherSoup.select('#archiveString'):
-    #     t_feel = e.select('.ArchiveTempFeeling')[0].text.split(' ')[2]
-    #     print(t_feel)
 
     about_list = weather_soup.select('#forecastShort-content')[0].text.split('. ')
 
