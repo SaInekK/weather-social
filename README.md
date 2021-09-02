@@ -13,3 +13,4 @@ pip install flask_wtf
 
 pip install email_validator
 
+pip install flask_cors
