@@ -11,6 +11,7 @@ app = Flask(__name__)
 # app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 CORS(app)
 
+
 class Config(object):
     SECRET_KEY = os.environ.get("SECRET KEY") or "any_key"
 
