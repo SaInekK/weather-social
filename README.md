@@ -1,3 +1,3 @@
 # Weather-social
-# Simple Flask app with weather parser
+# Simple Flask app with the weather parser
 ![](weather.gif)
